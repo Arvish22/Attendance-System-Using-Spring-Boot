@@ -1,7 +1,6 @@
 package com.core.ats.controller;
 
 import java.util.List;
-import java.util.Locale;
 
 import javax.validation.Valid;
 
@@ -11,10 +10,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.core.ats.model.Attendance;
 import com.core.ats.model.User;
@@ -32,7 +29,7 @@ public class AttendanceController {
 	
 	//listattendance
 	
-	@RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/", "/attendanceList" }, method = RequestMethod.GET)
 	public String listUsers(ModelMap model) {
 		
 		User user = userService.findBySSO(getPrincipal());

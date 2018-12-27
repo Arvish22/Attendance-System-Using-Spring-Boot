@@ -34,11 +34,11 @@
 					</tr>
 		    	</thead>
 	    		<tbody>
-				<c:forEach items="${attendance}" var="user">
+				<c:forEach items="${attendance}" var="attendance">
 					<tr>
 						<td>${attendance.status}</td>
-						<td>${user.date}</td>
-						<td>${user.type}</td>
+						<td>${attendance.date}</td>
+						<td>${attendance.type}</td>
 							<td><a href="<c:url value='/edit-attendance-${attendance.id}' />" class="btn btn-success custom-width">edit</a></td>
 							<td><a href="<c:url value='/delete-attendance-${attendance.id}' />" class="btn btn-danger custom-width">delete</a></td>
 					</tr>

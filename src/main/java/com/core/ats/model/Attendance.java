@@ -28,8 +28,9 @@ public class Attendance implements Serializable {
 	private int id;
 	
 	private int user_Id;
-	@NotEmpty
-	@Column(name="STATUS", nullable=false)
+	
+	
+	@Column(name="STATUS")
 	private String status;
 	
 	@Temporal(TemporalType.DATE)
