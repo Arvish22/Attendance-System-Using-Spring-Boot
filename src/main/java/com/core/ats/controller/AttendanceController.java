@@ -10,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -71,6 +72,39 @@ public class AttendanceController {
 		return "addattendance";
 	}
 	
+	@RequestMapping(value = { "/edit-attendance-{id}" }, method = RequestMethod.GET)
+	public String editUser(@PathVariable int id, ModelMap model) {
+		Attendance attendance = attendanceService.findById(id);
+		model.addAttribute("attendance", attendance);
+		model.addAttribute("edit", true);
+		model.addAttribute("loggedinuser", getPrincipal());
+		return "addattendance";
+	}
+	
+	/**
+	 * This method will be called on form submission, handling POST request for
+	 * updating user in database. It also validates the user input
+	 */
+	@RequestMapping(value = { "/edit-attendance-{id}" }, method = RequestMethod.POST)
+	public String updateUser(@Valid Attendance attendance, BindingResult result,
+			ModelMap model, @PathVariable int id) {
+
+		if (result.hasErrors()) {
+			return "addattendance";
+		}
+
+		attendanceService.updateAttendance(attendance);
+
+		model.addAttribute("success"," updated successfully");
+		model.addAttribute("loggedinuser", getPrincipal());
+		return "addattendancesuccess";
+	}
+	
+	@RequestMapping(value = { "/delete-attendance-{id}" }, method = RequestMethod.GET)
+	public String deleteUser(@PathVariable int id) {
+		attendanceService.deleteById(id);
+		return "redirect:/attendanceList";
+	}
 	
 	/**
 	 * This method returns the principal[user-name] of logged-in user.

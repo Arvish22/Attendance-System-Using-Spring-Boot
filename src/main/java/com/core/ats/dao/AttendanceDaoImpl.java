@@ -38,4 +38,19 @@ public class AttendanceDaoImpl extends AbstractDao<Integer, Attendance>implement
 		persist(attendance);
 	}
 
+	@Override
+	public Attendance findById(int id) {
+		Attendance attendance = getByKey(id);
+		return attendance;
+	}
+
+	@Override
+	public void deleteById(int id) {
+		// TODO Auto-generated method stub
+		Criteria crit = createEntityCriteria();
+		crit.add(Restrictions.eq("id", id));
+		Attendance attendance = (Attendance)crit.uniqueResult();
+		delete(attendance);
+	}
+
 }

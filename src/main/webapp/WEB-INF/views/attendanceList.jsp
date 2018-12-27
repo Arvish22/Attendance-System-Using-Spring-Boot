@@ -23,6 +23,11 @@
 		 		<a href="<c:url value='/newattendance' />">Add New Attendance</a>
 		 	</div>
 		 	
+		 	
+		 	<div class="well">
+		 		<a href="<c:url value='/list' />">List User</a>
+		 	</div>
+		 	
 			<table class="table table-hover">
 	    		<thead>
 		      		<tr>
