@@ -32,8 +32,8 @@ public class Attendance implements Serializable {
 	@Column(name="STATUS", nullable=false)
 	private String status;
 	
-	@Temporal(TemporalType.TIMESTAMP)
-	@DateTimeFormat(pattern = "yyyy-mm-dd'T'hh:mm")
+	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(pattern = "yyyy-mm-dd")
 	private Date date;
 	
 	@NotEmpty

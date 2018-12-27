@@ -17,12 +17,10 @@ D:\java\Assingment\ats\src\main\java\com\core\ats\configuration\HibernateConfigu
 D:\java\Assingment\ats\src\main\java\com\core\ats\dao\UserDaoImpl.java
 D:\java\Assingment\ats\src\main\java\com\core\ats\service\AttendanceServiceImpl.java
 D:\java\Assingment\ats\src\main\java\com\core\ats\model\Attendance.java
-D:\java\Assingment\ats\src\main\java\com\core\ats\model\DayType.java
 D:\java\Assingment\ats\src\main\java\com\core\ats\controller\AttendanceController.java
 D:\java\Assingment\ats\src\main\java\com\core\ats\service\AttendanceService.java
 D:\java\Assingment\ats\src\main\java\com\core\ats\dao\AttendanceDao.java
 D:\java\Assingment\ats\src\main\java\com\core\ats\security\SecurityConfiguration.java
-D:\java\Assingment\ats\src\main\java\com\core\ats\model\Type.java
 D:\java\Assingment\ats\src\main\java\com\core\ats\configuration\AppInitializer.java
 D:\java\Assingment\ats\src\main\java\com\core\ats\dao\AttendanceDaoImpl.java
 D:\java\Assingment\ats\src\main\java\com\core\ats\dao\HibernateTokenRepositoryImpl.java

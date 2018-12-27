@@ -36,7 +36,7 @@
 				<div class="form-group col-md-12">
 					<label class="col-md-3 control-lable" for="date">Date</label>
 					<div class="col-md-7">
-						<form:input type="datetime-local" path="date" id="date" class="form-control input-sm" />
+						<form:input type="date" path="date" id="date" class="form-control input-sm" />
 						<div class="has-error">
 							<form:errors path="date" class="help-inline"/>
 						</div>

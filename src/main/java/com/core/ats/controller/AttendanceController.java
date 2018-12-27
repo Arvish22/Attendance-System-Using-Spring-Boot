@@ -58,7 +58,7 @@ public class AttendanceController {
 		attendanceService.saveAttendance(attendance);
 		
 		model.addAttribute("success", "Attendance updated successfully");
-		return "Attendancesuccess";
+		return "addattendancesuccess";
 	}
 	
 	
