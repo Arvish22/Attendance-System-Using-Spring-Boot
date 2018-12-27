@@ -18,6 +18,10 @@
 		<div class="panel panel-default">
 			  <!-- Default panel contents -->
 		  	<div class="panel-heading"><span class="lead">List of Users </span></div>
+		  	
+		  	<div class="well">
+		 		<a href="<c:url value='/attendanceList' />">view attendance</a>
+		 	</div>
 			<table class="table table-hover">
 	    		<thead>
 		      		<tr>

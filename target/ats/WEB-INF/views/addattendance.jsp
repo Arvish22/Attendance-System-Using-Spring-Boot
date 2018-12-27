@@ -24,7 +24,10 @@
 				<div class="form-group col-md-12">
 					<label class="col-md-3 control-lable" for="status">Status</label>
 					<div class="col-md-7">
-						<form:input type="text" path="status" id="status" class="form-control input-sm"/>
+						<form:select path="status" name="status" class="form-control input-sm">
+						<option value="present">present</option>
+    					<option value="leave">Leave</option>
+    					</form:select>
 						<div class="has-error">
 							<form:errors path="status" class="help-inline"/>
 						</div>
@@ -63,10 +66,10 @@
 				<div class="form-actions floatRight">
 					<c:choose>
 						<c:when test="${edit}">
-							<input type="submit" value="Update" class="btn btn-primary btn-sm"/> or <a href="<c:url value='/list' />">Cancel</a>
+							<input type="submit" value="Update" class="btn btn-primary btn-sm"/> or <a href="<c:url value='/attendanceList' />">Cancel</a>
 						</c:when>
 						<c:otherwise>
-							<input type="submit" value="Add" class="btn btn-primary btn-sm"/> or <a href="<c:url value='/list' />">Cancel</a>
+							<input type="submit" value="Add" class="btn btn-primary btn-sm"/> or <a href="<c:url value='/attendanceList' />">Cancel</a>
 						</c:otherwise>
 					</c:choose>
 				</div>

@@ -20,10 +20,9 @@
 		  	<div class="panel-heading"><span class="lead">Attendance Record </span></div>
 		  	
 		 	<div class="well">
-		 		<a href="<c:url value='/newattendance' />">Add New Attendance</a>
+		 		<a href="<c:url value='/newattendance' />" class="btn btn-success custom-width">Add New </a>
 		 	</div>
-		 	
-		 	
+
 		 	<div class="well">
 		 		<a href="<c:url value='/list' />">List User</a>
 		 	</div>
@@ -44,7 +43,6 @@
 						<td>${attendance.status}</td>
 						<td>${attendance.date}</td>
 						<td>${attendance.type}</td>
-							<td><a href="<c:url value='/edit-attendance-${attendance.id}' />" class="btn btn-success custom-width">edit</a></td>
 							<td><a href="<c:url value='/delete-attendance-${attendance.id}' />" class="btn btn-danger custom-width">delete</a></td>
 					</tr>
 				</c:forEach>

@@ -49,7 +49,16 @@ public class AppController {
 	@Autowired
 	AuthenticationTrustResolver authenticationTrustResolver;
 	
+	
+	@RequestMapping(value = { "/list" }, method = RequestMethod.GET)
+	public String listUsers(ModelMap model) {
 
+		List<User> users = userService.findAllUsers();
+		model.addAttribute("users", users);
+		model.addAttribute("loggedinuser", getPrincipal());
+		return "userslist";
+	}
+	
 	/**
 	 * This method will provide the medium to add a new user.
 	 */
